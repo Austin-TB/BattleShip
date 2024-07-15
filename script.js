@@ -1,6 +1,6 @@
 const gridItems = document.querySelectorAll('.grid-item');
 const resetGameButton = document.querySelector('#reset-game-button')
-resetGameButton.style.backgroundColor='grey';
+resetGameButton.style.backgroundColor = 'grey';
 
 const hideImages = () => {
     gridItems.forEach(item => {
@@ -23,7 +23,7 @@ const shufflePosition = () => {
 
 shufflePosition();
 hideImages();
-let gameWin=false;
+let gameWin = false;
 
 let clickCount = 0;
 let ship = 0;
@@ -32,8 +32,8 @@ const message = document.createElement('p');
 gridItems.forEach(item => {
     item.addEventListener('click', () => {
         const img = item.querySelector('img');
-        if (img.style.display!=='none' || gameWin) return;
-        resetGameButton.style.backgroundColor='violet';
+        if (img.style.display !== 'none' || gameWin) return;
+        resetGameButton.style.backgroundColor = 'violet';
 
         if (clickCount < 8) {
             clickCount++;
@@ -43,7 +43,7 @@ gridItems.forEach(item => {
                     if (message.textContent.length === 0) {
                         message.textContent = 'You won! Press play again to try again';
                         document.body.appendChild(message);
-                        gameWin=true;
+                        gameWin = true;
                     }
                 }
             }
@@ -62,7 +62,7 @@ resetGameButton.addEventListener('click', () => {
     ship = 0;
     hideImages();
     shufflePosition();
-    resetGameButton.style.backgroundColor='grey';
+    resetGameButton.style.backgroundColor = 'grey';
     message.textContent = '';
-    gameWin=false;
+    gameWin = false;
 })
