@@ -21,18 +21,13 @@ const shufflePosition = () => {
     });
 };
 
-function initializeGame() {
-    shufflePosition();
-    hideImages();
+shufflePosition();
+hideImages();
 
-    let gameWin = false;
-    let clickCount = 0;
-    let ship = 0;
-    const message = document.createElement('p');
-
-}
-
-initializeGame();
+let gameWin = false;
+let clickCount = 0;
+let ship = 0;
+const message = document.createElement('p');
 
 gridItems.forEach(item => {
     item.addEventListener('click', () => {
