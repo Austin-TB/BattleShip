@@ -23,8 +23,8 @@ const shufflePosition = () => {
 
 shufflePosition();
 hideImages();
-let gameWin = false;
 
+let gameWin = false;
 let clickCount = 0;
 let ship = 0;
 const message = document.createElement('p');
@@ -57,6 +57,7 @@ gridItems.forEach(item => {
         }
     });
 });
+
 resetGameButton.addEventListener('click', () => {
     clickCount = 0;
     ship = 0;
